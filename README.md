@@ -16,31 +16,14 @@ The search page has a text input that may be used to find books. As the value of
 - install all project dependencies with `npm install`
 - start the development server with `npm start`
 
-## Project structure
+## Components structure
 
 ```bash
-├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── **components**
+    ├── components
     │   ├── Book.js # represents a book.  Displays information about book. 
     │   ├── Library.js # contains the users bookshelves.
     │   └── Search.js # allows the user to search for books and displays all book results
-    │   └── Shelf.js # displays all the books in the specific book shelf**
-        ├──  icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+    │   └── Shelf.js # displays all the books in the specific book shelf
 ```
 
 ## Backend Server
