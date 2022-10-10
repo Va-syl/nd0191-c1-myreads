@@ -4,8 +4,7 @@ import * as BooksAPI from "../BooksAPI";
 import Shelf from "./Shelf";
 import { useDebounce } from "use-debounce";
 
-function Search() {
-  const [books, setBooks] = useState([]);
+function Search({books, updateBooks, getBooks}) {
   const [searchResults, setSearchResults] = useState([]);
   const [query, setQuery] = useState("");
   const [debouncedQuery] = useDebounce(query, 500);
@@ -17,8 +16,11 @@ function Search() {
       searchBooks(debouncedQuery);
     }
   }, [debouncedQuery]);
+  
+  useEffect(() => {
+    getBooks();
+  }, []);
 
-  const getBooks = () => BooksAPI.getAll().then((resp) => setBooks(resp));
   const searchBooks = (query) => {
     BooksAPI.search(query)
       .then((result) => {
@@ -39,22 +41,6 @@ function Search() {
       .catch(() => {
         setSearchResults([]);
       });
-  };
-
-  useEffect(() => {
-    getBooks();
-  }, []);
-
-  const updateBooks = (changedBook, newShelf) => {
-    const newBooks = books.map((book) => {
-      if (book.id === changedBook.id) {
-        book.shelf = newShelf;
-      }
-      return book;
-    });
-    setBooks(newBooks);
-
-    BooksAPI.update(changedBook, newShelf);
   };
 
   return (
