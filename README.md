@@ -30,11 +30,11 @@ The search page has a text input that may be used to find books. As the value of
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
     ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── components
+    ├── **components
     │   ├── Book.js # represents a book.  Displays information about book. 
     │   ├── Library.js # contains the users bookshelves.
     │   └── Search.js # allows the user to search for books and displays all book results
-    │   └── Shelf.js # displays all the books in the specific book shelf
+    │   └── Shelf.js # displays all the books in the specific book shelf**
         ├──  icons # Helpful images for your app. Use at your discretion.
     │   ├── add.svg
     │   ├── arrow-back.svg
