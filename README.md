@@ -11,10 +11,18 @@ The main page also has a link to /search, a search page that allows you to find 
 
 The search page has a text input that may be used to find books. As the value of the text input changes, the books that match that query are displayed on the page, along with a control that lets you add the book to your library. To keep the interface consistent, you may consider re-using some of the code you used to display the books on the main page.
 
-## Running the application:
+## Getting Started
+This application was created with create-react-app and requires only npm install and npm start to get it installed and launched.
 
-- install all project dependencies with `npm install`
-- start the development server with `npm start`
+### Installing
+- install all project dependencies
+```
+npm install
+```
+- start the development server 
+```
+npm start
+```
 
 ## Components structure
 
@@ -72,3 +80,6 @@ search(query);
 ## Important
 
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+
+##Author
+**Va-syl**
